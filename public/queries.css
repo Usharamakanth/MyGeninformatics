@@ -1,0 +1,70 @@
+/* ----------------------------Navigation Bar --------------------------- */
+  
+ 
+  /* Media Query for max-width: 768px (small screens) */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .nav-menu a {
+        margin: 10px 0;
+    }
+}
+  
+  
+  /* Media Query for even smaller screens (max-width: 480px) */
+@media screen and (max-width: 768px) {
+    .parallax-content h2 {
+        font-size: 18px;
+    }
+
+    .parallax-content p {
+        font-size: 10px;
+        padding:0 10px;
+    }
+}
+
+/* Media Query for smaller screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .about cite {
+        display: block;
+        margin: 10px auto;
+    }
+
+    .about img {
+        margin-top: 5px;
+    }
+}
+
+/* Media Query for smaller screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .clients h2 {
+        font-size: 24px;
+    }
+
+    .clients cite {
+        margin: 10px;
+    }
+
+    .clients p {
+        font-size: 16px;
+    }
+}
+
+/* Media Query for smaller screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .footer footer {
+        flex-wrap: wrap;
+    }
+
+    .footer div {
+        flex: 1 1 100%;
+    }
+}

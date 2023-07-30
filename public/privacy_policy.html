@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrivacyPolicy</title>
+    <link rel="stylesheet" href="footer.html"/>
+</head>
+<body>
+    <h1>Privacy Policy</h1>
+    <p>At MyGen Informatics, we take data protection seriously and follow appropriate measures to prevent data 
+    misuse and unauthorized access. When completing the ‘contact us’ form on our website your personal details 
+    such as name and Email address are collected in order to reach you back. We use this data only to contact 
+    you back and is never used for any other marketing purposes or never shared with third-parties. 
+    We store/process the data as per General Data Protection Regulation (GDPR) guidelines. You have the right 
+    to delete and withdraw your consent to store your personal data with us. You also have the right to request 
+    the data we stored, and you will be sent the information we collected from you through our website. Please 
+    send your requests/queries regarding the personal data and privacy policy to info@mygeninformatics.nl.
+    </p>   
+    <p>All the research data that we receive from our clients will be stored, processed and analyzed on our own 
+    servers locally. If we use any secured third-party services such as AWS or GoogleCloud to process, analyze,
+    store or transfer raw or analyzed research data, this will be informed properly to the client. Any data, either
+    personal or research data is never shared with any other third-parties that are not associated with MyGen 
+    Informatics. If you have any queries about data policy, please reach us at info@mygeninformatics.nl.
+    </p> 
+
+    <div id="footer-placeholder"></div>
+    <script>
+    fetch('footer.html')
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,442 @@
+@font-face {
+    font-family: 'Astro';
+    src: url(resources/Astro.ttf);
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Quicksand:wght@300;400;500;600&family=Raleway:ital,wght@0,200;0,300;0,500;1,500&display=swap');
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Quicksand','Poppins','Raleway','Astro',sans-serif;
+}
+body{
+    background: #f9f9f9;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+}
+.header {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff; /* Replace with desired background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a raised effect */
+    z-index: 1000; /* Set a high z-index to make sure it's always on top */
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff; 
+    padding: 10px 20px;
+  }
+.logo img{
+    width:120px;
+    height:40px;
+    margin-left:20px;
+    margin-top:2px;
+}
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+.nav-menu   a {
+    font-family:'Astro';
+    font-size:12px;
+    text-decoration: none;
+    color: #333333;
+    margin: 0 15px;
+    border-radius:20px;
+    
+  }
+  .nav-menu a:hover {
+    background: black;
+    color: #007bff; 
+}
+.home-icon a{
+    color:#333333;
+    font-size:20px;
+}
+/* Styling for the parallax section */
+.parallax {
+    height: 500px; /* Set the desired height for the parallax section */
+    background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(/resources/LandingImages/2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+  }
+  /* Styling for the content inside the parallax section */
+.parallax-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+  .parallax-content h1 {
+    font-family:'Astro';
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+  .typing-text {
+    display: inline-block;
+    font-size:18px;
+    white-space: nowrap;
+    overflow: hidden;
+    /* border-right: 2px solid black; The typing cursor effect */
+   
+}
+
+/* CSS animation for typing effect */
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
+}
+   /* Apply typing animation */
+   .char-animation {
+    display: inline-block;
+    animation: typing 4s steps(40) forwards; /* Adjust the typing speed here (in seconds) */
+}
+
+/* Define blue color for the word "gen" */
+.blue-gen {
+    color: blue;
+}
+
+
+
+
+  /* ----------------------------------------ABOUT------------------------------------------------ */
+
+.about{
+    width:80%;
+    margin:20px auto;
+}
+.about h1 {
+    font-family: 'Astro';
+    font-size:30px;
+    text-align: center;
+}
+.about p {
+    font-family: 'Poppins';
+    font-weight:300;
+    font-size:15px;
+    text-align: center;
+    line-height: 1.6;
+}
+ .about cite{
+  display:inline-block;
+  text-align: center;
+  margin-top: 5px;
+  font-size: 14px;
+  margin:85px 100px;
+}
+.about cite img {
+   
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* margin-top:2px; */
+  }
+    /* Animation for citations */
+    .about cite {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+      
+      .about:hover cite {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    
+      /* ---------------------------SERVICES----------------------------- */
+
+.services {
+    width:100%;
+    margin:20px auto;
+    background:#d6e2f0
+} 
+.services h1 {
+    font-family: 'Astro';
+    font-size:30px;
+    text-align: center;
+}
+.row{
+    width:80%;
+    margin:20px auto;
+    /* display:inline-block; */
+    
+}
+.services-card {
+    display:inline-block;
+    border-radius: 10px;
+    filter: drop-shadow(0 5px 10px 0 #ffffff);
+    width: 300px;
+    height: 350px;
+    background-color: #ffffff;
+    padding: 20px;
+    margin:10px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in;
+  }
+  
+  .services-card::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -15px;
+    right: -15px;
+    background: #294A9A;
+    
+    height:220px;
+    width: 25px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .services-card:hover::before{
+      transition-delay:0.2s ;
+  
+    transform: scale(40);
+  }
+  
+  .services-card:hover{
+      color: #ffffff;
+  
+  }
+  
+  .services-card p{
+      padding: 5px 0;
+      font-family: 'Poppins';
+      font-size:12px;
+  }
+
+
+  /* ------------------------------------------Capabilities---------------------------------------------- */
+  
+.capabilities {
+    width:80%;
+    height:100%;
+    margin:20px auto;
+    
+}
+.capabilities h1{
+    font-family: 'Astro';
+    font-size:30px;
+    text-align: center;
+}
+
+.slide-container {
+    overflow: hidden;
+}
+.slide-item {
+    opacity: 0;
+    font-family: 'Poppins';
+    font-size:15px;
+    line-height: 1.6;
+    transform: translateX(-100%);
+    animation: slideIn 10s forwards;
+}
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+  
+
+  
+
+
+  /* --------------------------------------------Trusted companies------------------------ */
+
+  .clients {
+    width:100%;
+    text-align: center;
+    margin:20px auto;
+    background: #d6e2f0;
+    height:80vh;
+  }
+  
+  .clients h2 {
+    font-size: 30px;
+    font-family: 'Astro';
+    margin-bottom: 30px;
+    color: black;
+  }
+  .clients p {
+    font-family: 'Quicksand';
+    font-size: 20px;
+    padding-top: 20px;
+  }
+  
+  /* Style for <cite> elements */
+  .clients cite {
+    display: inline-block;
+    margin: 20px;
+  }
+  
+  .clients cite img {
+    max-width: 100%;
+    height: auto;
+    /* transition: opacity 0.6s ease, transform 0.6s ease; */
+  }
+
+  /* -----------------------------------contactForm---------------------------------- */
+
+.contactform{
+    width:80%;
+    margin:20px auto;
+}
+.contactform h1 {
+    font-family: 'Astro';
+    font-size:30px;
+    text-align: center;
+}
+.contactform p{
+    font-family: 'Raleway';
+    font-size:15px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.6;
+
+}
+
+ /* Style the form columns */
+ .form-column {
+    width:80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin:40px 60px ;
+  
+
+  }
+  .form-column label {
+    display: block;
+    margin-bottom: 5px;
+  }
+ 
+  .form-column input[type="text"],
+.form-column input[type="email"],
+.form-column textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-column textarea {
+    resize: vertical;
+  }
+  
+  /* Style the checkbox container */
+  .checkbox-container {
+    display:flex;
+    margin-bottom: 15px;
+    
+  }
+  .checkbox-container input[type="checkbox"] {
+    margin-right: 5px; /* Add a small margin between checkbox and label text */
+  }
+  
+  .checkbox-container label {
+    font-size: 12px;
+  }
+    /* Style the submit button */
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-left:20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Hover effect for the submit button */
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+    /* -------------------------------footer----------------------- */
+
+footer {
+    background: #d6e2f0;
+    padding: 20px;
+    font-size: 18px;
+    color:black;
+    display: flex;
+    line-height: 1.4;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+  }
+  /* Style the columns in the footer */
+.footer-column {
+    flex: 1;
+    margin: 10px;
+  }
+ 
+  /* Style the links in the footer */
+.footer-column a {
+    display: block;
+    color: black;
+    font-size:20px;
+    text-decoration: none;
+    margin-bottom: 30px;
+  }
+  /* Style the links on hover */
+div a:hover {
+    color: #007bff; /* Change the link color on hover (you can modify this color to your liking) */
+  }
+  /* Style the copyright statement */
+div {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  /* ----------------------------------Arrow Up--------------------------------------------- */
+
+/* Position the arrow icon at the bottom right corner */
+.arrow-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999; /* Ensure the icon appears above other elements */
+  }
+  /* Style the arrow icon */
+.arrow-icon a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: gray;
+    color: #fff;
+    border-radius: 30%;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  /* Add a hover effect to the arrow icon */
+.arrow-icon a:hover {
+    background-color: #555;
+  }
